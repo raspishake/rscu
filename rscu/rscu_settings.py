@@ -135,7 +135,7 @@ def default_settings():
     "station_latitude": 37.22888,
     "station_longitude": -115.81113,
     "wave_source_type": "fsdn",
-    "wave_source": "fdsnws.raspberryshakedata.com",
+    "wave_source": "https://fdsnws.raspberryshakedata.com",
     "wave_source_port": 16032,
     "rscu_save_directory": "%s",
     "pixels_wide": 1200,
