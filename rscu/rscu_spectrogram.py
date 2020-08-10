@@ -37,6 +37,7 @@ def plot_spectrogram_chart():
     s_max_freq = rscu_support.spectrogram_max_frequency.get()           # string
     s_min_freq = rscu_support.spectrogram_min_frequency.get()           # string
     log_freq = rscu_support.spectrogram_log_frequency.get()             # bool
+    log_color = rscu_support.spectrogram_log_color.get()             # bool
     show_seismogram = rscu_support.spectrogram_show_seismogram.get()    # bool
     show_colorbar = rscu_support.spectrogram_show_colorbar.get()        # bool
     colormap = rscu_support.spectrogram_colormap.get()                  # string
@@ -121,7 +122,7 @@ def plot_spectrogram_chart():
     if( show_seismogram ):
         ax1.plot(t, waves[0].data, 'k', linewidth=0.5)                  # Plot the seismogram (waveform) as the top subfigure (ax1)
 
-    fig = waves[0].spectrogram(show=False, log=log_freq, axes=ax2, cmap=colormap)  # Plot the spectrogram as the bottom subfigure (ax2)
+    fig = waves[0].spectrogram(show=False, log=log_freq, axes=ax2, cmap=colormap, dbscale=log_color)  # Plot the spectrogram as the bottom subfigure (ax2)
 
     if ( log_freq ):
         mappable = ax2.collections[0]                                   # To calculate the color bar, log plots use "matplotlib.collections.QuadMesh"

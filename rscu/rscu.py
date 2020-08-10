@@ -875,6 +875,13 @@ class rscu_toplevel:
         self.spectrogram_colormap_combo.configure(values=self.value_list)
         self.spectrogram_colormap_combo.configure(textvariable=rscu_support.spectrogram_colormap)
 
+        self.spectrogram_log_color_check = tk.Checkbutton(self.chart_type_spectrogram_tabs_t3_3)
+        self.spectrogram_log_color_check.place(x=20, y=310, height=22, width=180)
+        self.spectrogram_log_color_check.configure(anchor='w')
+        self.spectrogram_log_color_check.configure(justify='left')
+        self.spectrogram_log_color_check.configure(text='''Log Color Scale''')
+        self.spectrogram_log_color_check.configure(variable=rscu_support.spectrogram_log_color)
+
         self.spectrogram_date_label = tk.Label(self.chart_type_spectrogram_tabs_t3_3)
         self.spectrogram_date_label.place(x=380, y=30,  height=20, width=142)
         self.spectrogram_date_label.configure(anchor='w')

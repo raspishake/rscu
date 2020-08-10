@@ -196,6 +196,9 @@ def set_Tk_var():
     global spectrogram_log_frequency
     spectrogram_log_frequency = tk.BooleanVar()
     spectrogram_log_frequency.set(rscu_settings.settings['spectrogram']['spectrogram_log_frequency'])
+    global spectrogram_log_color
+    spectrogram_log_color = tk.BooleanVar()
+    spectrogram_log_color.set(rscu_settings.settings['spectrogram']['spectrogram_log_color'])
     global spectrogram_show_seismogram
     spectrogram_show_seismogram = tk.BooleanVar()
     spectrogram_show_seismogram.set(rscu_settings.settings['spectrogram']['spectrogram_show_seismogram'])

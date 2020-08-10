@@ -167,6 +167,7 @@ def default_settings():
     "spectrogram_max_frequency": 25.0,
     "spectrogram_min_frequency": 0.05,
     "spectrogram_log_frequency": false,
+    "spectrogram_log_color": true,
     "spectrogram_show_seismogram": true,
     "spectrogram_show_colorbar": true,
     "spectrogram_colormap": "nipy_spectral",
@@ -236,6 +237,7 @@ def main_menu_save_prefs():
     settings['spectrogram']['spectrogram_max_frequency'] = float(rscu_support.spectrogram_max_frequency.get())
     settings['spectrogram']['spectrogram_min_frequency'] = float(rscu_support.spectrogram_min_frequency.get())
     settings['spectrogram']['spectrogram_log_frequency'] = bool(rscu_support.spectrogram_log_frequency.get())
+    settings['spectrogram']['spectrogram_log_color'] = bool(rscu_support.spectrogram_log_color.get())
     settings['spectrogram']['spectrogram_show_seismogram'] = bool(rscu_support.spectrogram_show_seismogram.get())
     settings['spectrogram']['spectrogram_show_colorbar'] = bool(rscu_support.spectrogram_show_colorbar.get())
     settings['spectrogram']['spectrogram_colormap'] = rscu_support.spectrogram_colormap.get()
@@ -311,6 +313,7 @@ def main_menu_restore_prefs():
     rscu_support.spectrogram_max_frequency.set(settings['spectrogram']['spectrogram_max_frequency'])
     rscu_support.spectrogram_min_frequency.set(settings['spectrogram']['spectrogram_min_frequency'])
     rscu_support.spectrogram_log_frequency.set(settings['spectrogram']['spectrogram_log_frequency'])
+    rscu_support.spectrogram_log_color.set(settings['spectrogram']['spectrogram_log_color'])
     rscu_support.spectrogram_show_seismogram.set(settings['spectrogram']['spectrogram_show_seismogram'])
     rscu_support.spectrogram_show_colorbar.set(settings['spectrogram']['spectrogram_show_colorbar'])
     rscu_support.spectrogram_colormap.set(settings['spectrogram']['spectrogram_colormap'])
@@ -382,6 +385,7 @@ def main_menu_reset_defaults():
     rscu_support.spectrogram_max_frequency.set(reset_settings['spectrogram']['spectrogram_max_frequency'])
     rscu_support.spectrogram_min_frequency.set(reset_settings['spectrogram']['spectrogram_min_frequency'])
     rscu_support.spectrogram_log_frequency.set(reset_settings['spectrogram']['spectrogram_log_frequency'])
+    rscu_support.spectrogram_log_color.set(reset_settings['spectrogram']['spectrogram_log_color'])
     rscu_support.spectrogram_show_seismogram.set(reset_settings['spectrogram']['spectrogram_show_seismogram'])
     rscu_support.spectrogram_show_colorbar.set(reset_settings['spectrogram']['spectrogram_show_colorbar'])
     rscu_support.spectrogram_colormap.set(reset_settings['spectrogram']['spectrogram_colormap'])
